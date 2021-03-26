@@ -53,7 +53,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var tfconv = require("@tensorflow/tfjs-converter");
 var face_1 = require("./face");
-var BLAZEFACE_MODEL_URL = 'https://jianfeixiangji.cn/aitiaosheng/tfjs/blazeface_v1';
+var BLAZEFACE_MODEL_URL = 'https://www.jianfeixiangji.cn/aitiaosheng/tfjs/blazeface_v1/';
 /**
  * Load blazeface.
  *

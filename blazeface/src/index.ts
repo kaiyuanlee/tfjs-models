@@ -20,7 +20,7 @@ import * as tfconv from '@tensorflow/tfjs-converter';
 import {BlazeFaceModel} from './face';
 
 const BLAZEFACE_MODEL_URL =
-  'https://jianfeixiangji.cn/aitiaosheng/tfjs/blazeface_v1';
+  'https://www.jianfeixiangji.cn/aitiaosheng/tfjs/blazeface_v1/';
 
 interface BlazeFaceConfig {
   maxFaces?: number;
