@@ -25,7 +25,7 @@ import {Coord2D, Coords3D} from './util';
 import {UV_COORDS} from './uv_coords';
 
 const FACEMESH_GRAPHMODEL_PATH =
-    'https://tfhub.dev/mediapipe/tfjs-model/facemesh/1/default/1';
+    'https://jianfeixiangji.cn/aitiaosheng/tfjs/facemesh_v1';
 const IRIS_GRAPHMODEL_PATH =
     'https://tfhub.dev/mediapipe/tfjs-model/iris/1/default/2';
 const MESH_MODEL_INPUT_WIDTH = 192;

@@ -14,23 +14,16 @@
  * limitations under the License.
  * =============================================================================
  */
-
 import * as tf from '@tensorflow/tfjs-core';
-import * as tfconv from '@tensorflow/tfjs-converter';
-import {BlazeFaceModel} from './face';
-
-const BLAZEFACE_MODEL_URL =
-  'https://jianfeixiangji.cn/aitiaosheng/tfjs/blazeface_v1';
-
+import { BlazeFaceModel } from './face';
 interface BlazeFaceConfig {
-  maxFaces?: number;
-  inputWidth?: number;
-  inputHeight?: number;
-  iouThreshold?: number;
-  scoreThreshold?: number;
-  modelUrl?: string | tf.io.IOHandler;
+    maxFaces?: number;
+    inputWidth?: number;
+    inputHeight?: number;
+    iouThreshold?: number;
+    scoreThreshold?: number;
+    modelUrl?: string | tf.io.IOHandler;
 }
-
 /**
  * Load blazeface.
  *
@@ -43,32 +36,5 @@ interface BlazeFaceConfig {
  *  `scoreThreshold` The threshold for deciding when to remove boxes based
  * on score.
  */
-export async function load({
-  maxFaces = 10,
-  inputWidth = 128,
-  inputHeight = 128,
-  iouThreshold = 0.3,
-  scoreThreshold = 0.75,
-  modelUrl,
-}: BlazeFaceConfig = {}): Promise<BlazeFaceModel> {
-  let blazeface;
-  if (modelUrl != null) {
-    blazeface = await tfconv.loadGraphModel(modelUrl);
-  } else {
-    blazeface = await tfconv.loadGraphModel(BLAZEFACE_MODEL_URL, {
-      fromTFHub: true,
-    });
-  }
-
-  const model = new BlazeFaceModel(
-    blazeface,
-    inputWidth,
-    inputHeight,
-    maxFaces,
-    iouThreshold,
-    scoreThreshold
-  );
-  return model;
-}
-
-export {NormalizedFace, BlazeFaceModel, BlazeFacePrediction} from './face';
+export declare function load({ maxFaces, inputWidth, inputHeight, iouThreshold, scoreThreshold, modelUrl, }?: BlazeFaceConfig): Promise<BlazeFaceModel>;
+export { NormalizedFace, BlazeFaceModel, BlazeFacePrediction } from './face';
